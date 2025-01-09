@@ -6,8 +6,8 @@ resources:
 configMapGenerator:
   - name: global-config
     literals:
-      APP_ENV: production
-      APP_DEBUG: "false"
+      - APP_ENV=production
+      - APP_DEBUG=false
 
 commonLabels:
   app: guestbook
