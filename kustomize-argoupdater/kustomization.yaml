@@ -4,8 +4,3 @@ kind: Kustomization
 # 리소스 정의
 resources:
   - deploy-ecr.yaml
-
-# 이미지 업데이트 설정
-images:
-  - name: 710281024320.dkr.ecr.ap-northeast-2.amazonaws.com/ingress-kitchen
-#    newTag: latest  # 기본적으로 최신 태그를 업데이트하도록 설정
