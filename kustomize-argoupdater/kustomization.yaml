@@ -8,5 +8,5 @@ images:
 - name: docker.io/imyourkm/frontend
   #newTag: 2.0
   #newPullPolicy: Always
-  name: docker.io/imyourkm/backend
-  name: docker.io/imyourkm/mongodb
+- name: docker.io/imyourkm/backend
+- name: docker.io/imyourkm/mongodb
