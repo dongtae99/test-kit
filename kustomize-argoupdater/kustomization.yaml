@@ -6,7 +6,6 @@ resources:
 
 images:
   - name: 710281024320.dkr.ecr.ap-northeast-2.amazonaws.com/ingress-kitchen
-    newTag: latest
 
 patchesStrategicMerge:
   - image-patch.yaml
