@@ -1,9 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
 resources:
   - deploy-ecr.yaml
 
 images:
   - name: 710281024320.dkr.ecr.ap-northeast-2.amazonaws.com/ingress-kitchen
-    # newTag: latest  # ArgoCD Image Updater가 감지할 태그를 지정
+    newTag: latest
 
 patchesStrategicMerge:
   - image-patch.yaml
