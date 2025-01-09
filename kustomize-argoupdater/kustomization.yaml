@@ -1,12 +1,16 @@
-namePrefix: kustomize-
+namespace: default
 
 resources:
-- ./deploy.yaml
-apiVersion: kustomize.config.k8s.io/v1beta1
-kind: Kustomization
-images:
-- name: docker.io/imyourkm/frontend
-  #newTag: 2.0
-  #newPullPolicy: Always
-- name: docker.io/imyourkm/backend
-- name: docker.io/imyourkm/mongodb
+  - deploy.yaml
+
+configMapGenerator:
+  - name: global-config
+    literals:
+      APP_ENV: production
+      APP_DEBUG: "false"
+
+commonLabels:
+  app: guestbook
+
+generatorOptions:
+  disableNameSuffixHash: true
