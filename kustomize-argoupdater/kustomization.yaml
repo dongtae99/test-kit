@@ -1,11 +1,10 @@
 resources:
-  - deploy.yaml
+  - deploy-ecr.yaml
 
-configMapGenerator:
-  - name: global-config
-    literals:
-      - APP_ENV=production
-      - APP_DEBUG=false
+images:
+  - name: 710281024320.dkr.ecr.ap-northeast-2.amazonaws.com/ingress-kitchen
+    newTag: latest  # ArgoCD Image Updater가 감지할 태그를 지정
 
-generatorOptions:
-  disableNameSuffixHash: true
+patchesStrategicMerge:
+  - frontend-image-patch.yaml
+  - backend-image-patch.yaml
