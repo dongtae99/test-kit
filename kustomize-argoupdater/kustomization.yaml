@@ -7,8 +7,5 @@ configMapGenerator:
       - APP_ENV=production
       - APP_DEBUG=false
 
-labels:
-  app: guestbook  # labels 필드는 객체 형식으로 작성
-
 generatorOptions:
   disableNameSuffixHash: true
