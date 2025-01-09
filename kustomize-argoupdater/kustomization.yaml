@@ -3,8 +3,7 @@ resources:
 
 images:
   - name: 710281024320.dkr.ecr.ap-northeast-2.amazonaws.com/ingress-kitchen
-    newTag: latest  # ArgoCD Image Updater가 감지할 태그를 지정
+    # newTag: latest  # ArgoCD Image Updater가 감지할 태그를 지정
 
 patchesStrategicMerge:
-  - frontend-image-patch.yaml
-  - backend-image-patch.yaml
+  - image-patch.yaml
