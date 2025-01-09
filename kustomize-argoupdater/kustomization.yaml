@@ -1,0 +1,10 @@
+namePrefix: kustomize-
+
+resources:
+- ./deploy.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+images:
+- name: docker.io/imyourkm/frontend
+  #newTag: 2.0
+  #newPullPolicy: Always
