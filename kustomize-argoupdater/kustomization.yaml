@@ -9,3 +9,4 @@ images:
   #newTag: 2.0
   #newPullPolicy: Always
   name: docker.io/imyourkm/backend
+  name: docker.io/imyourkm/mongodb
